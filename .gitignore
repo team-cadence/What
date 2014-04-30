@@ -67,14 +67,14 @@ com_crashlytics_export_strings.xml
 ### Ruby ###
 *.gem
 *.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp/
+code/.config
+code/coverage/
+code/InstalledFiles
+code/pkg/
+code/spec/reports/
+code/test/tmp/
+code/test/version_tmp/
+code/tmp/
 
 ## Specific to RubyMotion:
 .dat*
@@ -105,12 +105,12 @@ build/
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
-/db/*.sqlite3
-/public/system
-/coverage/
-/spec/tmp
+code/log
+code/tmp
+code/db/*.sqlite3
+code/public/system
+code/coverage/
+code/spec/tmp
 **.orig
 rerun.txt
 pickle-email-*.html
@@ -120,8 +120,8 @@ config/initializers/secret_token.rb
 config/secrets.yml
 
 ## Environment normalisation:
-/.bundle
-/vendor/bundle
+code/.bundle
+code/vendor/bundle
 
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
@@ -129,3 +129,4 @@ config/secrets.yml
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
+*~
