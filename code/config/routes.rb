@@ -1,5 +1,5 @@
 What::Application.routes.draw do
-  root 'lists#index'
+  root 'welcome#index'
   devise_for :users
   resources :list_items
 
