@@ -1,0 +1,30 @@
+<div class="large-12 columns">
+    <div class="large-12 columns">
+        <strong><%= list.title %></strong>
+    </div>
+
+    <% list.list_items.each do |list_item| %>
+
+            <%= form_for(list_item) do |f| %>
+            <div class="row collapse">
+                <div class="small-10 columns">
+                    <%= f.text_field :label %>
+                </div>
+                <div class="small-2 columns">
+                    <a href="#" class="button postfix"><%= list_item.checked ? 'Y' : 'N' %></a>
+                </div>
+            </div>
+            <% end %>
+
+    <% end %>
+
+    <div class="row collapse">
+        <div class="small-10 columns">
+            <input type="text" placeholder="Hex Value">
+        </div>
+        <div class="small-2 columns">
+            <a href="#" class="button postfix">Go</a>
+        </div>
+    </div>
+
+</div>

@@ -1,9 +1,15 @@
 What::Application.routes.draw do
+  root 'lists#index'
+  devise_for :users
+  resources :list_items
+
+  resources :lists
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
