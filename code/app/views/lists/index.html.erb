@@ -1,27 +1,21 @@
-<h1>Listing lists</h1>
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Listing lists</h1>
+    </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% @lists.each_slice(4) do |lists| %>
+    <div class="row">
+        <% lists.each do |list| %>
+            <div class="large-3 columns end">
+                <div class="list-container">
+                    <%= render partial: 'list', locals: {list: list} %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+<% end %>
 
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.title %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
 <%= link_to 'New List', new_list_path %>
