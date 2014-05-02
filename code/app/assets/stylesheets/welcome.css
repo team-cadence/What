@@ -1,6 +1,6 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    background: #FFFFFF url("subtle_dots.png    ");
+}
 
 .video-container {
   display: block;
@@ -43,4 +43,18 @@
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-bottom: 0;
+}
+.welcome-box{
+    background: #506D7D;
+    text-stroke: 0.35px;
+    text-shadow: 0px 1px 1px #000;
+}
+.welcome-box *{
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.welcome-box a{
+    color: #ffffff;
+    background: #364BE3;
 }
