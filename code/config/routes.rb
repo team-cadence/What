@@ -2,7 +2,7 @@ What::Application.routes.draw do
 
 
   devise_for :users
-  root @signed_in ? 'lists#index' : 'welcome#index'
+  root 'welcome#index'
   resources :list_items
 
   resources :lists
