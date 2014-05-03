@@ -1,6 +1,8 @@
 What::Application.routes.draw do
-  root 'welcome#index'
+
+
   devise_for :users
+  root @signed_in ? 'lists#index' : 'welcome#index'
   resources :list_items
 
   resources :lists

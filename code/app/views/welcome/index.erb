@@ -7,7 +7,7 @@
     <div class="row">
         <div class="large-8 large-centered columns">
             <div class="large-6 columns">
-                <%= render partial: 'list', locals: {list: @list} %>
+                <%= render partial: 'editable_list', locals: {list: @list} %>
             </div>
             <div class="large-6 columns">
                 <h4>Sign up!</h4>
@@ -25,5 +25,24 @@
         <div class="large-4 large-centered columns">
             <a href="#" class="button expand small">Share WhatToFuck</a>
         </div>
+    </div>
+</div>
+<!-- End welcome box -->
+
+<!-- Make room bitcheees! -->
+<div class="row filler">&nbsp;</div>
+
+<div class="row">
+    <div class="large-12 columns text-center">
+        <h3> Recently published lists </h3>
+    </div>
+    <div class="large-12 columns">
+        <% if @published_lists %>
+            <% @published_lists.each do |l| %>
+                <div class="large-3 columns">
+                    <%= render partial: 'list', locals: {list: l} %>
+                </div>
+            <% end %>
+        <% end %>
     </div>
 </div>
